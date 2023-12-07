@@ -1,4 +1,5 @@
 return {
+
   {
     "rcarriga/nvim-notify",
     opts = {
@@ -18,9 +19,9 @@ return {
         light = "latte",
         dark = "mocha",
       },
-      transparent_background = false, -- disables setting the background color.
+      transparent_background = true, -- disables setting the background color.
       show_end_of_buffer = false, -- shows the '~' characters after the end of buffers
-      term_colors = true, -- sets terminal colors (e.g. `g:terminal_color_0`)
+      term_colors = false, -- sets terminal colors (e.g. `g:terminal_color_0`)
       dim_inactive = {
         enabled = false, -- dims the background color of inactive window
         shade = "dark",
@@ -52,9 +53,10 @@ return {
       end,
       integrations = {
         cmp = true,
+        which_key = true,
         gitsigns = true,
         nvimtree = true,
-        telescope = true,
+        telescope = false,
         harpoon = true,
         mason = true,
         neotest = true,
@@ -83,6 +85,23 @@ return {
         -- Background styles. Can be "dark", "transparent" or "normal"
         sidebars = "dark", -- style for sidebars, see below
         floats = "dark", -- style for floating windows
+      },
+    },
+  },
+
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    init = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 300
+    end,
+    opts = {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+      window = {
+        border = "single",
       },
     },
   },
