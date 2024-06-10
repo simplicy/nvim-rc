@@ -23,9 +23,41 @@ return {
   
   -- change trouble config
   {
-    "folke/trouble.nvim",
-    -- opts will be merged with the parent spec
-    enabled = false,
+  "folke/trouble.nvim",
+  opts = {}, -- for default options, refer to the configuration section for custom setup.
+  cmd = "Trouble",
+  keys = {
+    {
+      "<leader>xx",
+      "<cmd>Trouble diagnostics toggle<cr>",
+      desc = "Diagnostics (Trouble)",
+    },
+    {
+      "<leader>xX",
+      "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
+      desc = "Buffer Diagnostics (Trouble)",
+    },
+    {
+      "<leader>cs",
+      "<cmd>Trouble symbols toggle focus=false<cr>",
+      desc = "Symbols (Trouble)",
+    },
+    {
+      "<leader>cl",
+      "<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
+      desc = "LSP Definitions / references / ... (Trouble)",
+    },
+    {
+      "<leader>xL",
+      "<cmd>Trouble loclist toggle<cr>",
+      desc = "Location List (Trouble)",
+    },
+    {
+      "<leader>xQ",
+      "<cmd>Trouble qflist toggle<cr>",
+      desc = "Quickfix List (Trouble)",
+      },
+    },
   },
 
   -- add symbols-outline
@@ -39,7 +71,7 @@ return {
   
 
   -- change some telescope options and a keymap to browse plugin files
-  {
+   {
     "nvim-telescope/telescope.nvim",
     keys = {
       -- add a keymap to browse plugin files
@@ -54,8 +86,8 @@ return {
     opts = {
       defaults = {
         layout_strategy = "horizontal",
-        layout_config = { prompt_position = "bottom" },
-        sorting_strategy = "descending",
+        layout_config = { prompt_position = "top" },
+        sorting_strategy = "ascending",
         winblend = 0,
       },
     },
