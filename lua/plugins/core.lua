@@ -117,9 +117,6 @@ return {
   --     auto_display = true,
   --   },
   -- },
-  
-
- {"/xiyaowong/telescope-emoji.nvim"},
 
   {
     "folke/persistence.nvim",
