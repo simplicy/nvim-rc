@@ -117,9 +117,6 @@ return {
   --     auto_display = true,
   --   },
   -- },
-  
-
- {"/xiyaowong/telescope-emoji.nvim"},
 
   {
     "folke/persistence.nvim",
@@ -143,7 +140,6 @@ return {
       build = "make",
       config = function()
         require("telescope").load_extension("fzf")
-        require("telescope").load_extension("emoji")
       end,
     },
   },
