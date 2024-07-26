@@ -6,6 +6,22 @@ return {
       background_colour = "#000000",
     },
   },
+  -- {
+  --   "0xstepit/flow.nvim",
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {},
+  --   config = function()
+  --     require("flow").setup({
+  --       transparent = false, -- Set transparent background.
+  --       fluo_color = "green", --  Fluo color: pink, yellow, orange, or green.
+  --       mode = "bright", -- Intensity of the palette: normal, bright, desaturate, or dark. Notice that dark is ugly!
+  --       aggressive_spell = false, -- Display colors for spell check.
+  --     })
+  --
+  --     vim.cmd("colorscheme flow")
+  --   end,
+  -- },
   { "savq/melange-nvim" },
   {
     "catppuccin/nvim",
@@ -14,7 +30,7 @@ return {
     lazy = false,
     opts = {
       --config here
-      flavour = "frappe", -- latte, frappe, macchiato, mocha
+      flavour = "mocha", -- latte, frappe, macchiato, mocha
       background = { -- :h background
         light = "latte",
         dark = "mocha",
