@@ -147,8 +147,10 @@ return {
         "toml",
         "rust",
         "html",
+        "glimmer",
         "css",
       })
+      -- add handlebars to the html parsers
     end,
   },
   -- or you can return new options to override all the defaults
