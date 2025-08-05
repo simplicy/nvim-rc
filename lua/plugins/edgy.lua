@@ -12,7 +12,6 @@ return {
       "nvim-lua/plenary.nvim",
       "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
       "MunifTanjim/nui.nvim",
-      "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
     },
   },
   {
@@ -38,8 +37,8 @@ return {
   {
     "akinsho/toggleterm.nvim",
     version = "*",
-    config = {
-      name = "Terminal",
+    opts = {
+      direction = "float",
     },
     keys = {
       { "<C-/>", "<cmd>ToggleTerm<cr>", desc = "Toggle Terminal" },
@@ -72,7 +71,7 @@ return {
     keys = {
       { "<leader>O", false },
       {
-        "<leader>n",
+        "<leader>k",
         function()
           require("oil").open()
         end,
