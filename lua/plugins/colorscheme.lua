@@ -76,12 +76,29 @@ return {
         harpoon = true,
         mason = true,
         neotest = true,
+        bufferline = true,
         treesitter = true,
         notify = true,
         mini = false,
         -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
       },
     },
+  },
+  {
+    "bluz71/vim-moonfly-colors",
+    name = "moonfly",
+    lazy = false,
+    priority = 1000,
+  },
+  {
+    "olimorris/onedarkpro.nvim",
+    lazy = false,
+    opts = {
+      options = {
+        transparency = true,
+      },
+    },
+    priority = 1000, -- Ensure it loads first
   },
   {
     "folke/tokyonight.nvim",
@@ -132,7 +149,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight",
+      colorscheme = "catppuccin", -- set to your preferred colorscheme``
     },
   },
 
