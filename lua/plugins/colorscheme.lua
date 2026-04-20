@@ -139,10 +139,20 @@ return {
 
   { "nvim-tree/nvim-web-devicons" },
 
+  -- {
+  --   "folke/edgy.nvim",
+  --   event = "VeryLazy",
+  --   opts = {},
+  -- },
   {
-    "folke/edgy.nvim",
-    event = "VeryLazy",
-    opts = {},
+    "folke/snacks.nvim",
+    opts = {
+      terminal = {
+        win = {
+          position = "float",
+        },
+      },
+    },
   },
 
   -- Configure LazyVim to load gruvbox

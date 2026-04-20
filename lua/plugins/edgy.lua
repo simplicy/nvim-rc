@@ -34,16 +34,16 @@ return {
       },
     },
   },
-  {
-    "akinsho/toggleterm.nvim",
-    version = "*",
-    opts = {
-      direction = "float",
-    },
-    keys = {
-      { "<C-/>", "<cmd>ToggleTerm<cr>", desc = "Toggle Terminal" },
-    },
-  },
+  -- {
+  --   "akinsho/toggleterm.nvim",
+  --   version = "*",
+  --   opts = {
+  --     direction = "float",
+  --   },
+  --   keys = {
+  --     { "<C-/>", "<cmd>ToggleTerm<cr>", desc = "Toggle Terminal" },
+  --   },
+  -- },
 
   {
     "stevearc/oil.nvim",
